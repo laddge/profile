@@ -15,7 +15,7 @@ twitter = "@laddge_"
 [main]
 name = "Laddge"
 desc = "趣味でプログラミングなどをしてる高校3年生のLaddge(らっじ)です。<br>Linuxが大好きです。友達の影響でvimmerです。<br>プログラミング好きな人が集う場所として、Discord上に「<a href=\"https://shebang.laddge.net\" target=\"_blank\">Shebang</a>」というコミュニティを作って運営しています。気軽に参加してみてください。"
-profile_image = "img/profile.png"
+profile_image = "https://res.cloudinary.com/laddge/image/upload/f_auto,q_auto/v1648961119/laddge.net/laddge.png"
 devicons = ["python", "linux", "vim", "javascript", "bash", "c"]
 
 [social]
