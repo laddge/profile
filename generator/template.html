@@ -13,8 +13,12 @@
         <meta property="og:image" content="{{ ogp.image }}">
         <link rel="shortcut icon" type="image/png" href="{{ site.icon }}">
         <link href="https://unpkg.com/sanitize.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <style>
+            svg {
+                fill: currentColor;
+                height: 1em;
+            }
+        </style>
     </head>
     <body style="background-color: #f4f5f7; color: #333;">
         <div style="margin: 8rem 2rem;">
@@ -25,7 +29,7 @@
                     {% if main.devicons %}
                     <div style="font-size: 1.2rem; color: gray;">
                         {% for d in main.devicons %}
-                        <i class="devicon-{{ d }}-plain"></i>
+                        {{ load_icon("devicon", d) }}
                         {% endfor %}
                     </div>
                     {% endif %}
@@ -39,7 +43,7 @@
                 <div style="text-align: center; font-size: 2rem; letter-spacing: .5rem;">
                     {% for s in social %}
                     <a href="{{ social[s] }}" target="_blank" style="text-decoration: none; color: #333;">
-                        <i class="fab fa-{{ s }}"></i>
+                        {{ load_icon("fontawesome", s) }}
                     </a>
                     {% endfor %}
                 </div>
