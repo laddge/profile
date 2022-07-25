@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ site.title }}</title>
+        <meta name="description" content="{{ site.meta_desc }}">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="{{ ogp.twitter }}">
+        <meta property="og:url" content="{{ ogp.url }}">
+        <meta property="og:title" content="{{ ogp.title }}">
+        <meta property="og:description" content="{{ ogp.desc }}">
+        <meta property="og:image" content="{{ ogp.image }}">
+        <link rel="shortcut icon" type="image/png" href="{{ site.icon }}">
+        <link href="https://unpkg.com/sanitize.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    </head>
+    <body style="background-color: #f4f5f7; color: #333;">
+        <div style="margin: 8rem 2rem;">
+            <div style="margin: 0 auto; padding: .7rem; border: 1.5px solid #333; box-shadow: .4rem .4rem #adb5bd; max-width: 30rem;">
+                <div style="text-align: center; margin-top: 4rem; margin-bottom: 2rem;">
+                    <img src="{{ main.profile_image }}" alt="{{ main.name }}" style="width: 8rem; height: 8rem; border-radius: .3rem;">
+                    <h1 style="margin-top: .5rem; margin-bottom: 0;">{{ main.name }}</h1>
+                    {% if main.devicons %}
+                    <div style="font-size: 1.2rem; color: gray;">
+                        {% for d in main.devicons %}
+                        <i class="devicon-{{ d }}-plain"></i>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <hr noshade>
+                <div style="margin: 1.2rem 1rem;">
+                    {{ main.desc }}
+                </div>
+                {% if social %}
+                <hr noshade>
+                <div style="text-align: center; font-size: 2rem; letter-spacing: .5rem;">
+                    {% for s in social %}
+                    <a href="{{ social[s] }}" target="_blank" style="text-decoration: none; color: #333;">
+                        <i class="fab fa-{{ s }}"></i>
+                    </a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            <div style="text-align: right; margin-top: .5rem;">
+                <a href="https://github.com/laddge/profile" target="_blank" style="text-decoration: none;">
+                    <small style="text-align: right; color: #adb5bd; text-decoration: underline;">designed by Laddge.</small>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
