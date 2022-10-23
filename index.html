@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
+        <script>
+            if ('oauth_token' in location.search) {
+                location.href = 'https://tw4i.laddge.net/callback' + location.search;
+            }
+        </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laddgeのプロフィール</title>
