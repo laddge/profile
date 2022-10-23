@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <script>
-            if ('oauth_token' in location.search) {
+            if (location.search.indexOf('oauth_token') !== -1) {
                 location.href = 'https://tw4i.laddge.net/callback' + location.search;
             }
         </script>
